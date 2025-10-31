@@ -1,5 +1,6 @@
 package com.example.dinedash.ui;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder> {
 
-    private List<MenuItem> menuList;
+    private final List<MenuItem> menuList;
 
     public MenuAdapter(List<MenuItem> menuList) {
         this.menuList = menuList;
@@ -27,12 +28,13 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
         return new MenuViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull MenuViewHolder holder, int position) {
         MenuItem item = menuList.get(position);
         holder.name.setText(item.getName());
         holder.description.setText(item.getDescription());
-        holder.price.setText("$" + item.getPrice());
+        holder.price.setText(String.format("$%s", item.getPrice()));
     }
 
     @Override

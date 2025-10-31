@@ -16,7 +16,7 @@
         android:textStyle="bold|normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="121dp" />
+        tools:layout_editor_absoluteY="121dp"/>
 
     <TextView
         android:id="@+id/foodChoosing"
@@ -79,7 +79,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/customerowner2"
         tools:layout_editor_absoluteY="130dp" />
-
-
-
-
+</androidx.constraintlayout.widget.ConstraintLayout>
