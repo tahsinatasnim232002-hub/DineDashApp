@@ -8,6 +8,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.dinedash.ui.MenuActivity;
+import com.example.dinedash.ui.PlatformActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Button orderButton = findViewById(R.id.orderButton);
 
         orderButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+            Intent intent = new Intent(MainActivity.this, PlatformActivity.class);
             startActivity(intent);
         });
     }
