@@ -19,16 +19,16 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:contentDescription="Menu Image"
-            android:src="@mipmap/dinedash"/>
+            android:src="@drawable/banner"/>
 
         <!-- Overlay for text -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:background="#10000000"
             android:gravity="bottom"
-            android:padding="8dp"
-            android:background="#80000000"> <!-- semi-transparent overlay -->
+            android:orientation="vertical"
+            android:padding="8dp"> <!-- semi-transparent overlay -->
 
             <TextView
                 android:id="@+id/menuName"
@@ -37,13 +37,14 @@
                 android:textColor="#ffffff"
                 android:textSize="16sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/menuDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Description"
                 android:textColor="#ffffff"
-                android:textSize="14sp"
-                android:text="Description"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/menuPrice"
