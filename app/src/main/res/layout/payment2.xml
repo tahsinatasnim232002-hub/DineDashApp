@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="217dp">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="378dp"
+        android:layout_height="88dp"
+        android:hint="Add your number"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="113dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="170dp"
+        android:layout_height="73dp"
+        android:hint="MM/YY"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="294dp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="204dp"
+        android:layout_height="59dp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="294dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="171dp"
+            android:layout_height="59dp"
+            android:hint="CVC"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="290dp"
+        android:layout_height="91dp"
+        android:backgroundTint="#F16A3A"
+        android:text="Checkout"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="637dp" />
