@@ -79,6 +79,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="28dp"
         android:text="Customer Side"
+        android:backgroundTint="#F44336"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/findFood" />
 
@@ -88,6 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Owner Side"
+        android:backgroundTint="#F44336"
         app:layout_constraintBottom_toBottomOf="@+id/customerSideBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.277"

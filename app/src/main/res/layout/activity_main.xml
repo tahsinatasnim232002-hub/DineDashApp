@@ -43,6 +43,7 @@
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="60dp"
         android:text="Go to Menu"
+        android:backgroundTint="#F44336"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/DineDash" />

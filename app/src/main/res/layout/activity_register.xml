@@ -95,6 +95,7 @@
         android:textSize="30dp"
         android:gravity="center"
         android:textStyle="bold|normal"
+        android:backgroundTint="#F44336"
         tools:layout_editor_absoluteX="126dp"
         tools:layout_editor_absoluteY="618dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

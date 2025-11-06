@@ -23,6 +23,7 @@
         android:layout_width="350dp"
         android:layout_height="53dp"
         android:text="For Admin"
+        android:gravity="center"
         android:textColor="#412e25"
         android:textSize="30sp"
         android:textStyle="normal"
@@ -34,12 +35,12 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="246dp"
-        android:layout_height="74dp"
+        android:layout_width="321dp"
+        android:layout_height="71dp"
         android:backgroundTint="#F16A3A"
         android:text="Continue"
         android:textColor="#000000"
-        android:textSize="20dp"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="645dp" />
