@@ -14,15 +14,20 @@ public class PlatformActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_platforms);
 
+//        Button customerSideBtn = findViewById(R.id.customerSideBtn);
+//        customerSideBtn.setOnClickListener(v -> {
+//            Intent intent = new Intent(PlatformActivity.this, MenuActivity.class);
+//            startActivity(intent);
+//        });
         Button customerSideBtn = findViewById(R.id.customerSideBtn);
         customerSideBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(PlatformActivity.this, MenuActivity.class);
+            Intent intent = new Intent(PlatformActivity.this, RegisterActivity.class);
             startActivity(intent);
         });
 
-        Button adminSideBtn = findViewById(R.id.customerSideBtn);
+        Button adminSideBtn = findViewById(R.id.ownerSideBtn);
         adminSideBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(PlatformActivity.this, MenuActivity.class);
+            Intent intent = new Intent(PlatformActivity.this, AdminActivity.class);
             startActivity(intent);
         });
     }

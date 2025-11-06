@@ -27,8 +27,13 @@
         <activity android:name=".ui.Payment2Activity" />
         <activity android:name=".ui.RegisterActivity" />
         <activity android:name=".ui.ThankYouActivity" />
-        <activity android:name=".ui.adminpage01Activity" />
-        <activity android:name=".ui.adminpage02Activity" />
+        <activity android:name=".ui.AdminLoginActivity" />
+        <activity android:name=".ui.AdminActivity" />
+        <activity android:name=".ui.AdminTableActivity" />
+
+
+
+
 
 
 

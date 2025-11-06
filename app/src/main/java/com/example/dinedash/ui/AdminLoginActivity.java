@@ -2,28 +2,29 @@ package com.example.dinedash.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.dinedash.R;
 
-public class adminpage01Activity extends AppCompatActivity {
+public class AdminLoginActivity extends AppCompatActivity {
 
-    private Button continueBtn;
+    private Button loginBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adminpage01); // Make sure XML filename matches
+        setContentView(R.layout.activity_adminpage02); // Make sure XML filename matches
 
         // Find the continue button
-        continueBtn = findViewById(R.id.button9);
+        View loginBtn = findViewById(R.id.loginBtn);
 
         // Set click listener
-        continueBtn.setOnClickListener(v -> {
+        loginBtn.setOnClickListener(v -> {
             // Example: Navigate to Admin Dashboard activity
-            Intent intent = new Intent(adminpage01Activity.this, adminpage01Activity.class);
+            Intent intent = new Intent(AdminLoginActivity.this, AdminTableActivity.class);
             startActivity(intent);
             finish(); // optional, prevents going back to AdminActivity
         });

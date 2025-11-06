@@ -34,42 +34,42 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register); // make sure this matches your XML filename
-
+        return ;
         // --- SAFE name lookup: try to resolve id by name first (avoids compile error if id not present)
-        int nameId = getResources().getIdentifier("nameInput", "id", getPackageName());
-        if (nameId != 0) {
-            // id exists in resources
-            View maybe = findViewById(nameId);
-            if (maybe instanceof TextInputEditText) {
-                nameInput = (TextInputEditText) maybe;
-            }
-        }
-
-        // If we still don't have nameInput, fallback to searching the view tree for first TextInputEditText
-        if (nameInput == null) {
-            View root = ((ViewGroup) findViewById(android.R.id.content)).getChildAt(0);
-            nameInput = findFirstTextInputEditText(root);
-            if (nameInput == null) {
-                Log.w(TAG, "Name input not found (no id and no TextInputEditText present).");
-            }
-        }
-
-        // These IDs exist in your XML (you posted them)
-        emailInput = findViewById(R.id.editTextTextEmailAddress);
-        passwordInput = findViewById(R.id.editTextTextPassword);
-        confirmPasswordInput = findViewById(R.id.editTextTextPassword2);
-        signupBtn = findViewById(R.id.button3);
-
-        if (signupBtn != null) {
-            signupBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    onSignupClicked();
-                }
-            });
-        } else {
-            Toast.makeText(this, "Sign up button not found in layout", Toast.LENGTH_SHORT).show();
-        }
+//        int nameId = getResources().getIdentifier("nameInput", "id", getPackageName());
+//        if (nameId != 0) {
+//            // id exists in resources
+//            View maybe = findViewById(nameId);
+//            if (maybe instanceof TextInputEditText) {
+//                nameInput = (TextInputEditText) maybe;
+//            }
+//        }
+//
+//        // If we still don't have nameInput, fallback to searching the view tree for first TextInputEditText
+//        if (nameInput == null) {
+//            View root = ((ViewGroup) findViewById(android.R.id.content)).getChildAt(0);
+//            nameInput = findFirstTextInputEditText(root);
+//            if (nameInput == null) {
+//                Log.w(TAG, "Name input not found (no id and no TextInputEditText present).");
+//            }
+//        }
+//
+//        // These IDs exist in your XML (you posted them)
+//        emailInput = findViewById(R.id.editTextTextEmailAddress);
+//        passwordInput = findViewById(R.id.editTextTextPassword);
+//        confirmPasswordInput = findViewById(R.id.editTextTextPassword2);
+//        signupBtn = findViewById(R.id.button3);
+//
+//        if (signupBtn != null) {
+//            signupBtn.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    onSignupClicked();
+//                }
+//            });
+//        } else {
+//            Toast.makeText(this, "Sign up button not found in layout", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     private void onSignupClicked() {
