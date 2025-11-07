@@ -21,7 +21,7 @@ public class CashPaymentActivity extends AppCompatActivity {
         proceedBtn.setOnClickListener(v -> {
             Intent intent = new Intent(CashPaymentActivity.this, ThankYouActivity.class);
             startActivity(intent);
-            finish(); // Remove this page from back stack
+//            finish(); // Remove this page from back stack
         });
     }
 }

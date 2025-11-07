@@ -20,9 +20,9 @@ public class ThankYouActivity extends AppCompatActivity {
         // Continue button click → back to Home/Menu or MainActivity
         continueBtn.setOnClickListener(v -> {
             Intent intent = new Intent(ThankYouActivity.this, MenuActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            finish();
+//            finish();
         });
     }
 }
