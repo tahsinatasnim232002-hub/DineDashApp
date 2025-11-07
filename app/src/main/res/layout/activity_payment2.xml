@@ -82,7 +82,7 @@
 
     <!-- Checkout Button -->
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/checkout"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:text="Checkout"

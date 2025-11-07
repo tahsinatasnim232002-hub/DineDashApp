@@ -6,48 +6,50 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="396dp"
-        android:layout_height="90dp"
+        android:id="@+id/wishmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:gravity="center"
         android:text="HOPE YOU LIKED OUR FOOD"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:textSize="28dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="159dp" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/textView7"
-        android:layout_width="184dp"
-        android:layout_height="70dp"
+        android:id="@+id/thankYou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="THANK YOU!"
+        android:gravity="center"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="254dp" />
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/wishmessage"/>
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="323dp"
-        android:layout_height="391dp"
+        android:id="@+id/orderplacing"
+        android:layout_width="341dp"
+        android:layout_height="358dp"
+        android:layout_marginTop="180dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/order"
-        tools:layout_editor_absoluteY="341dp" />
+        app:layout_constraintTop_toBottomOf="@+id/thankYou"
+        app:srcCompat="@drawable/order" />
 
     <Button
         android:id="@+id/button8"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CONTINUE"
         android:backgroundTint="#F16A3A"
         android:textColor="#000000"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="746dp" />
+        android:textStyle="bold|normal"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/orderplacing"  />
 </androidx.constraintlayout.widget.ConstraintLayout>

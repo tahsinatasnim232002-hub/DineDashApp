@@ -41,7 +41,7 @@ public class Payment2Activity extends AppCompatActivity {
         editTextExpiry = findViewById(R.id.editTextExpiry);
         editTextCvc = findViewById(R.id.editTextCvc);
 
-        checkoutBtn = findViewById(R.id.button7);
+        checkoutBtn = findViewById(R.id.checkout);
 
         if (checkoutBtn != null) {
             checkoutBtn.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +91,7 @@ public class Payment2Activity extends AppCompatActivity {
         Toast.makeText(this, "Payment details valid — proceeding to checkout", Toast.LENGTH_SHORT).show();
 
         // Navigate to MenuActivity (ensure MenuActivity exists)
-        Intent intent = new Intent(Payment2Activity.this, MenuActivity.class);
+        Intent intent = new Intent(Payment2Activity.this, ThankYouActivity.class);
         startActivity(intent);
         // optionally finish this activity:
         // finish();

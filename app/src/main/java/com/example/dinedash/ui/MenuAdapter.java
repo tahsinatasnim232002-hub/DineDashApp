@@ -1,6 +1,5 @@
 package com.example.dinedash.ui;
 
-import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,15 +8,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.dinedash.R;
 import com.example.dinedash.model.MenuItem;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder> {
 
     private final List<MenuItem> menuList;
+    private final List<MenuItem> selectedItems = new ArrayList<>();
 
     public MenuAdapter(List<MenuItem> menuList) {
         this.menuList = menuList;
-        setHasStableIds(true); // optional, ensures stable IDs
     }
 
     @NonNull
@@ -28,13 +28,22 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
         return new MenuViewHolder(view);
     }
 
-    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull MenuViewHolder holder, int position) {
         MenuItem item = menuList.get(position);
         holder.name.setText(item.getName());
-        holder.description.setText(item.getDescription());
-        holder.price.setText(String.format("$%s", item.getPrice()));
+        holder.price.setText("৳" + item.getPrice());
+
+        holder.itemView.setBackgroundColor(
+                selectedItems.contains(item) ? 0xFFDDFFDD : 0xFFFFFFFF
+        );
+
+        holder.itemView.setOnClickListener(v -> {
+            if (!selectedItems.contains(item)) {
+                selectedItems.add(item);
+            }
+            notifyItemChanged(position);
+        });
     }
 
     @Override
@@ -42,17 +51,16 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
         return menuList.size();
     }
 
-    @Override
-    public long getItemId(int position) {
-        return menuList.get(position).getId(); // use item ID if available
+    public List<MenuItem> getSelectedItems() {
+        return selectedItems;
     }
 
     public static class MenuViewHolder extends RecyclerView.ViewHolder {
-        TextView name, description, price;
+        TextView name, price;
+
         public MenuViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.menuName);
-            description = itemView.findViewById(R.id.menuDescription);
             price = itemView.findViewById(R.id.menuPrice);
         }
     }
