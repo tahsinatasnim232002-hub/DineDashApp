@@ -14,9 +14,9 @@ import com.example.dinedash.model.MenuItem;
 
 import java.util.ArrayList;
 
-public class MenudetailsActivity extends AppCompatActivity {
+public class MenuDetailsActivity extends AppCompatActivity {
 
-    private LinearLayout detailContainer;
+    private LinearLayout detailsContainer;
     private Button btnProceedPayment;
 
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
@@ -26,7 +26,7 @@ public class MenudetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menudetails);
 
         // Views initialize
-        detailContainer = findViewById(R.id.detailcontainer);
+        detailsContainer = findViewById(R.id.detailcontainer);
         btnProceedPayment = findViewById(R.id.btnproceedtopayment);
 
         // Get selected items from MenuActivity
@@ -39,7 +39,7 @@ public class MenudetailsActivity extends AppCompatActivity {
                 TextView tv = new TextView(this);
                 tv.setText(item.getName() + " - ৳" + item.getPrice());
                 tv.setTextSize(16);
-                detailContainer.addView(tv);
+                detailsContainer.addView(tv);
 
                 total += item.getPrice();
             }
@@ -49,17 +49,17 @@ public class MenudetailsActivity extends AppCompatActivity {
             totalText.setText("Total: ৳" + total);
             totalText.setTextSize(18);
             totalText.setPadding(16, 16, 16, 16);
-            detailContainer.addView(totalText);
+            detailsContainer.addView(totalText);
         } else {
             TextView emptyText = new TextView(this);
             emptyText.setText("No items selected");
             emptyText.setTextSize(16);
-            detailContainer.addView(emptyText);
+            detailsContainer.addView(emptyText);
         }
 
         // Go to PaymentActivity on button click
         btnProceedPayment.setOnClickListener(v -> {
-            Intent intent = new Intent(MenudetailsActivity.this, PaymentActivity.class);
+            Intent intent = new Intent(MenuDetailsActivity.this, PaymentActivity.class);
             startActivity(intent);
         });
     }

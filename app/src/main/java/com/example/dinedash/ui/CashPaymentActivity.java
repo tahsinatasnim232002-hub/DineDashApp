@@ -14,14 +14,11 @@ public class CashPaymentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cash);
 
         // Button reference from XML
-        Button proceedBtn = findViewById(R.id.proceedBtn);
+//        Button proceedBtn = findViewById(R.id.proceedBtn);
 
-        // Cash message is already in XML
-        // Button click → go to OrderPlacedActivity
-        proceedBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(CashPaymentActivity.this, ThankYouActivity.class);
-            startActivity(intent);
-//            finish(); // Remove this page from back stack
-        });
+//        proceedBtn.setOnClickListener(v -> {
+//            Intent intent = new Intent(CashPaymentActivity.this, ThankYouActivity.class);
+//            startActivity(intent);
+//        });
     }
 }

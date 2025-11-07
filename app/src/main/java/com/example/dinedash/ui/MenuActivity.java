@@ -42,7 +42,7 @@ public class MenuActivity extends AppCompatActivity {
                 if (selected.isEmpty()) {
                     Toast.makeText(this, "Please select at least one food", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(MenuActivity.this, MenudetailsActivity.class);
+                    Intent intent = new Intent(MenuActivity.this, MenuDetailsActivity.class);
                     intent.putParcelableArrayListExtra("selected_items", new ArrayList<>(selected));
                     startActivity(intent);
                 }

@@ -15,13 +15,13 @@ public class ThankYouActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thankyou);
 
-        Button continueBtn = findViewById(R.id.button8);
+        Button continueBtn = findViewById(R.id.continueBtn);
 
         // Continue button click → back to Home/Menu or MainActivity
         continueBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(ThankYouActivity.this, MenuActivity.class);
+//            Intent intent = new Intent(ThankYouActivity.this, MenuActivity.class);
 //            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
+//            startActivity(intent);
 //            finish();
         });
     }
