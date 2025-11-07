@@ -10,22 +10,19 @@ import com.example.dinedash.R;
 
 public class ThankYouActivity extends AppCompatActivity {
 
-    private Button continueBtn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_thankyou); // make sure XML file name matches
+        setContentView(R.layout.activity_thankyou);
 
-        // Find the button
-        continueBtn = findViewById(R.id.button8);
+        Button continueBtn = findViewById(R.id.button8);
 
-        // Set click listener
+        // Continue button click → back to Home/Menu or MainActivity
         continueBtn.setOnClickListener(v -> {
-            // Navigate to MenuActivity (home screen)
             Intent intent = new Intent(ThankYouActivity.this, MenuActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            finish(); // finish this activity so user can't go back to Thank You screen with back button
+            finish();
         });
     }
 }

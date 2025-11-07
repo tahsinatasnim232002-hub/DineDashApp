@@ -1,6 +1,5 @@
 package com.example.dinedash.ui;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -14,7 +13,6 @@ public class PaymentActivity extends AppCompatActivity {
 
     Button cardBtn, bkashBtn, cashBtn;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,20 +23,21 @@ public class PaymentActivity extends AppCompatActivity {
         bkashBtn = findViewById(R.id.bkashBtn);
         cashBtn = findViewById(R.id.cashBtn);
 
-        // --- Add Card Button ---
+        // --- Card Button ---
         cardBtn.setOnClickListener(v -> {
-            Toast.makeText(PaymentActivity.this, "Add Card feature coming soon...", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(PaymentActivity.this, CardActivity.class);
+            startActivity(intent);
         });
 
-        // --- Add Bkash Button ---
+        // --- Bkash Button ---
         bkashBtn.setOnClickListener(v -> {
-            Toast.makeText(PaymentActivity.this, "bKash payment coming soon...", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(PaymentActivity.this, BkashActivity.class);
+            startActivity(intent);
         });
 
         // --- Cash Button ---
         cashBtn.setOnClickListener(v -> {
-            Toast.makeText(PaymentActivity.this, "Cash payment selected", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(PaymentActivity.this, Payment2Activity.class);
+            Intent intent = new Intent(PaymentActivity.this, CashPaymentActivity.class);
             startActivity(intent);
         });
     }

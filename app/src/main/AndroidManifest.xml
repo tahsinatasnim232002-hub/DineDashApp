@@ -24,13 +24,16 @@
         <activity android:name=".ui.MenuActivity" />
         <activity android:name=".ui.PlatformActivity" />
         <activity android:name=".ui.PaymentActivity" />
-        <activity android:name=".ui.Payment2Activity" />
+        <activity android:name=".ui.CardActivity" />
         <activity android:name=".ui.RegisterActivity" />
         <activity android:name=".ui.ThankYouActivity" />
         <activity android:name=".ui.AdminLoginActivity" />
         <activity android:name=".ui.AdminActivity" />
         <activity android:name=".ui.AdminTableActivity" />
         <activity android:name=".ui.MenudetailsActivity" />
+        <activity android:name=".ui.BkashActivity"/>
+        <activity android:name=".ui.CashPaymentActivity"/>
+
 
 
 
