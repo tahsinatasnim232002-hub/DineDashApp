@@ -1,10 +1,10 @@
 package com.example.dinedash.api;
-
+import com.example.dinedash.BuildConfig;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    private static final String BASE_URL = "http://10.23.18.92:8080/api/";
+    private static final String BASE_URL = BuildConfig.BASE_URL;
     private static Retrofit retrofit;
 
     public static Retrofit getRetrofit() {

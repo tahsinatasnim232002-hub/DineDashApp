@@ -27,7 +27,7 @@ public class MenuDetailsActivity extends AppCompatActivity {
 
         // Views initialize
         detailsContainer = findViewById(R.id.detailcontainer);
-        btnProceedPayment = findViewById(R.id.btnproceedtopayment);
+        btnProceedPayment = findViewById(R.id.btnProceedToPayment);
 
         // Get selected items from MenuActivity
         ArrayList<MenuItem> selectedItems = getIntent().getParcelableArrayListExtra("selected_items");
