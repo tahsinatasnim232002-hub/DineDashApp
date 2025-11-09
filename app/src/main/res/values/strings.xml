@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DineDash</string>
+    <string name="cash_message">You are selected for cash payment. Please pay at time of getting your food</string>
 </resources>
