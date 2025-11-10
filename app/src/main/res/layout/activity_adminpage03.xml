@@ -69,11 +69,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:backgroundTint="@color/button_tint"
-        app:layout_constraintTop_toTopOf="50dp"
         android:text="Table-02"
         android:textSize="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/table1"
-        tools:layout_editor_absoluteX="49dp" />
+        app:layout_constraintTop_toBottomOf="@+id/table1" />
 
     <Button
         android:id="@+id/table3"
