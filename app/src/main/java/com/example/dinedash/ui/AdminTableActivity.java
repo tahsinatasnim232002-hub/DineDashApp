@@ -20,14 +20,14 @@ public class AdminTableActivity extends AppCompatActivity {
 
         // view init
 //        titleText = findViewById(R.id.textView10);
-//        table1Btn = findViewById(R.id.button12);
-//        table2Btn = findViewById(R.id.button13);
-//        table3Btn = findViewById(R.id.button14);
+        table1Btn = findViewById(R.id.table1);
+        table2Btn = findViewById(R.id.table2);
+        table3Btn = findViewById(R.id.table3);
 //
 //        // Click listeners (single-page behavior)
-//        table1Btn.setOnClickListener(v -> onTableSelected("Table-01"));
-//        table2Btn.setOnClickListener(v -> onTableSelected("Table-02"));
-//        table3Btn.setOnClickListener(v -> onTableSelected("Table-03"));
+        table1Btn.setOnClickListener(v -> onTableSelected("Table-01"));
+        table2Btn.setOnClickListener(v -> onTableSelected("Table-02"));
+        table3Btn.setOnClickListener(v -> onTableSelected("Table-03"));
     }
 
     /**
