@@ -6,17 +6,44 @@
     android:padding="20dp"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dinedash" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="163dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="88dp"
+        android:gravity="center"
+        android:text="DineDash"
+        android:textColor="#000000"
+        android:textSize="36dp"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="108dp"
         android:gravity="center"
         android:text="Add your payment methods"
-        android:textColor="#000000"
-        android:textSize="26dp"
+        android:textColor="@color/button_tint"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,11 +51,11 @@
         android:id="@+id/paymentText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="This card will only be charged when you place an order"
-        android:textColor="#412e25"
-        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textSize="20dp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,8 +65,8 @@
         android:id="@+id/cashBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#F16A3A"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/button_tint"
         android:text="CASH"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,8 +78,8 @@
         android:id="@+id/cardBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="#F16A3A"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/button_tint"
         android:gravity="center"
         android:text="ADD CARD"
         android:textSize="20dp"
@@ -65,13 +92,15 @@
         android:id="@+id/bkashBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#F16A3A"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/button_tint"
         android:text="ADD BKASH"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardBtn" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

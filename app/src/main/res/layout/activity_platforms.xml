@@ -7,27 +7,27 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="61dp"
+        android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dinedash" />
 
     <TextView
         android:id="@+id/DineDash"
-        android:layout_width="174dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="64dp"
-        android:gravity="start"
+        android:layout_width="163dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="88dp"
+        android:gravity="center"
         android:text="DineDash"
-        android:textColor="#F44336"
-        android:textSize="36sp"
+        android:textColor="#000000"
+        android:textSize="36dp"
         android:textStyle="bold|normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.608"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,6 +37,7 @@
         android:layout_height="265dp"
         android:layout_marginTop="16dp"
         android:background="#ffffff"
+        android:foregroundGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DineDash"
@@ -50,8 +51,9 @@
         android:text="Choose Your Food"
         android:textColor="#F44336"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="30dp"
         android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,42 +61,44 @@
 
     <TextView
         android:id="@+id/findFood"
-        android:layout_width="334dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="368dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="Easily find your type of food craving and you will get delivery in wide range"
-        android:textColor="#F44336"
-        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/foodChoosing" />
 
     <Button
         android:id="@+id/customerSideBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/button_tint"
+        android:gravity="center"
         android:text="Customer Side"
-        android:backgroundTint="#F44336"
+        app:layout_constraintTop_toBottomOf="@+id/findFood"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/findFood" />
+        app:layout_constraintEnd_toStartOf="@+id/ownerSideBtn"
+        app:layout_constraintHorizontal_chainStyle="spread" />
 
     <Button
         android:id="@+id/ownerSideBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="@color/button_tint"
+        android:gravity="center"
         android:text="Owner Side"
-        android:backgroundTint="#F44336"
-        app:layout_constraintBottom_toBottomOf="@+id/customerSideBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.277"
-        app:layout_constraintStart_toEndOf="@+id/customerSideBtn"
         app:layout_constraintTop_toTopOf="@+id/customerSideBtn"
-        app:layout_constraintVertical_bias="1.0" />
-
+        app:layout_constraintStart_toEndOf="@+id/customerSideBtn"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

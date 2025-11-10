@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/payment_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="58dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dinedash" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="163dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="88dp"
+        android:gravity="center"
+        android:text="DineDash"
+        android:textColor="#000000"
+        android:textSize="36dp"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Card number -->
     <com.google.android.material.textfield.TextInputLayout
@@ -12,8 +39,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:hint="Card number"
+        android:layout_marginTop="100dp"
         app:boxStrokeWidth="1dp"
         app:boxBackgroundMode="outline"
         app:layout_constraintTop_toTopOf="parent"
@@ -42,7 +69,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cvcLayout"
         app:layout_constraintHorizontal_weight="2"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -67,7 +94,7 @@
         app:layout_constraintStart_toEndOf="@id/cardnumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:layout_marginStart="8dp">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -88,12 +115,15 @@
         android:layout_height="56dp"
         android:text="Checkout"
         android:textAllCaps="false"
-        android:textSize="18sp"
-        android:backgroundTint="#F44336"
-        android:textColor="#000000"
+        android:textSize="20dp"
+        android:backgroundTint="@color/button_tint"
+        android:textColor="#fff"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/cardnumber"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

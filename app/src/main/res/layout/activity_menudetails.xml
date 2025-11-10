@@ -6,11 +6,38 @@
     android:layout_width="match_parent"
              android:layout_height="match_parent">
 
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="177dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="64dp"
+        android:gravity="center"
+        android:text="DineDash"
+        android:textColor="#000000"
+        android:textSize="36dp"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dinedash" />
+
     <LinearLayout
         android:id="@+id/detailcontainer"
         android:layout_width="match_parent"
-        android:layout_height="322dp"
-        android:layout_marginTop="152dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
         android:orientation="vertical"
         android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +49,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:textSize="16dp"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:gravity="center"
             android:textStyle="bold" />
 
         <TextView
@@ -30,22 +59,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="#444"
-            android:textSize="16dp"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:gravity="center"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/detailName"/>
+            app:layout_constraintTop_toBottomOf="@+id/detailName" />
     </LinearLayout>
 
     <Button
         android:id="@+id/btnProceedToPayment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:backgroundTint="#F16A3A"
-        android:text="Proceed to payment"
-        android:textSize="16dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/button_tint"
+        android:text="Proceed to Payment"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailcontainer" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
