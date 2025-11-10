@@ -14,7 +14,7 @@
         android:id="@+id/DineDash"
         android:layout_width="174dp"
         android:layout_height="55dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="88dp"
         android:gravity="start"
         android:text="DineDash"
@@ -39,13 +39,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DineDash"
         tools:ignore="MissingConstraints" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    >
 
+</LinearLayout>
     <ImageView
         android:id="@+id/dine_dash"
         android:layout_width="61dp"
         android:layout_height="60dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dinedash" />
@@ -68,6 +74,7 @@
         android:gravity="center"
         android:text="WELCOME"
         android:textSize="25dp"
+        android:fontFamily="@font/protest_riot"
         android:textStyle="bold|normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.433"
