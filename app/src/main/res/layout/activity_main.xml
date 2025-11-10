@@ -7,69 +7,64 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/logoSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <ImageView
+            android:id="@+id/dine_dash"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dinedash" />
+        <TextView
+            android:id="@+id/DineDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="DineDash"
+            android:textColor="#000000"
+            android:textSize="36sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/DineDash"
-        android:layout_width="174dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="88dp"
-        android:gravity="start"
-        android:text="DineDash"
-        android:textColor="#000000"
-        android:textSize="36sp"
-        android:textStyle="bold|normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="332dp"
-        android:layout_height="54dp"
+        android:id="@+id/slugLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
         android:gravity="center"
         android:text="Tap.Order.Dine.Dash"
         android:fontFamily="@font/protest_riot"
         android:textColor="#000000"
         android:textSize="24dp"
         android:textStyle="italic|bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DineDash"
-        tools:ignore="MissingConstraints" />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintTop_toTopOf="parent"
-    >
-
-</LinearLayout>
-    <ImageView
-        android:id="@+id/dine_dash"
-        android:layout_width="61dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dinedash" />
+        app:layout_constraintTop_toBottomOf="@+id/logoSection"
+       />
 
     <ImageView
-        android:id="@+id/dinedash1"
-        android:layout_width="317dp"
-        android:layout_height="196dp"
-        android:layout_marginStart="44dp"
+        android:id="@+id/bannerImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/dinedashpic" />
+        app:layout_constraintTop_toBottomOf="@id/slugLine"
+        app:srcCompat="@drawable/dinedashpic"
+        tools:layout_editor_absoluteX="9dp" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="169dp"
-        android:layout_height="51dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="WELCOME"
@@ -79,35 +74,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dinedash1" />
+        app:layout_constraintTop_toBottomOf="@+id/bannerImage" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="251dp"
-        android:layout_height="88dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="
-It’s a pleasure to meet you. We are excited that you’re here so let’s get started!"
+        android:text="It’s a pleasure to meet you. We are excited that you’re here so let’s get started!"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="579dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
         android:id="@+id/welcomeBtn"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="216dp"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/button_tint"
         android:text="Get Started"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dinedash1" />
+        app:layout_constraintTop_toBottomOf="@id/textView6" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
