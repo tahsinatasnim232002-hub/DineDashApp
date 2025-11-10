@@ -57,34 +57,90 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/userId"
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dinedash" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="163dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="88dp"
+        android:gravity="center"
+        android:text="DineDash"
+        android:textColor="#000000"
+        android:textSize="36dp"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView21"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="20dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:text="Admin Panel"
+        android:textColor="@color/button_tint"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/userId"
+        android:layout_width="301dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="120dp"
         android:hint="User Id"
         android:tooltipText="User Id"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="33dp">
-    </com.google.android.material.textfield.TextInputEditText>
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+
+        tools:layout_editor_absoluteY="274dp"></com.google.android.material.textfield.TextInputEditText>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/userId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:hint="Password"
         android:tooltipText="User Id"
-        tools:ignore="MissingConstraints">
-    </com.google.android.material.textfield.TextInputEditText>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userId"
+        tools:ignore="MissingConstraints"></com.google.android.material.textfield.TextInputEditText>
+
     <Button
         android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/password"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="@color/button_tint"
         android:text="Login"
-        android:textSize="15dp"
-    />
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

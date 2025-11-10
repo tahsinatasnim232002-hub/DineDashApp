@@ -37,7 +37,7 @@ public class MenuDetailsActivity extends AppCompatActivity {
         if (selectedItems != null && !selectedItems.isEmpty()) {
             for (MenuItem item : selectedItems) {
                 TextView tv = new TextView(this);
-                tv.setText(item.getName() + " - ৳" + item.getPrice());
+                tv.setText(item.getName() + " -Taka" + item.getPrice());
                 tv.setTextSize(16);
                 detailsContainer.addView(tv);
 
@@ -46,7 +46,7 @@ public class MenuDetailsActivity extends AppCompatActivity {
 
             // Show total price
             TextView totalText = new TextView(this);
-            totalText.setText("Total: ৳" + total);
+            totalText.setText("Total: Taka" + total);
             totalText.setTextSize(18);
             totalText.setPadding(16, 16, 16, 16);
             detailsContainer.addView(totalText);

@@ -12,43 +12,46 @@
 
     <TextView
         android:id="@+id/DineDash"
-        android:layout_width="174dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="88dp"
-        android:gravity="start"
+        android:layout_width="163dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="96dp"
+        android:gravity="center"
         android:text="DineDash"
         android:textColor="#000000"
-        android:textSize="36sp"
+        android:textSize="36dp"
         android:textStyle="bold|normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/dine_dash"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:foregroundGravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dinedash" />
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="332dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="314dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/protest_riot"
         android:gravity="center"
         android:text="Tap.Order.Dine.Dash"
-        android:fontFamily="@font/protest_riot"
         android:textColor="#000000"
-        android:textSize="24dp"
+        android:textSize="30dp"
         android:textStyle="italic|bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DineDash"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/dine_dash"
-        android:layout_width="61dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="128dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dinedash" />
+
 
     <ImageView
         android:id="@+id/dinedash1"
@@ -56,18 +59,19 @@
         android:layout_height="196dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="40dp"
+        android:foregroundGravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/dinedashpic" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="169dp"
-        android:layout_height="51dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="WELCOME"
-        android:textSize="25dp"
+        android:textSize="36dp"
         android:textStyle="bold|normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.433"
@@ -91,15 +95,12 @@ It’s a pleasure to meet you. We are excited that you’re here so let’s get 
 
     <Button
         android:id="@+id/welcomeBtn"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:layout_marginTop="216dp"
         android:backgroundTint="@color/button_tint"
         android:text="Get Started"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dinedash1" />
 
 
