@@ -3,35 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/payment_root"
+    android:background="#FFEEDD"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="20dp">
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="58dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dinedash" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="163dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="88dp"
-        android:gravity="center"
-        android:text="DineDash"
-        android:textColor="#000000"
-        android:textSize="36dp"
-        android:textStyle="bold|normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
-        app:layout_constraintStart_toEndOf="@+id/imageView11"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Card number -->
     <com.google.android.material.textfield.TextInputLayout
@@ -40,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Card number"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         app:boxStrokeWidth="1dp"
         app:boxBackgroundMode="outline"
         app:layout_constraintTop_toTopOf="parent"
@@ -122,7 +99,7 @@
         app:layout_constraintTop_toBottomOf="@id/cardnumber"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="50dp" />
 
 
 

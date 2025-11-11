@@ -52,6 +52,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#FFEEDD"
     android:layout_height="match_parent"
     android:padding="50dp"
 
@@ -91,7 +92,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="110dp"
         android:layout_marginEnd="20dp"
-        android:background="#fff"
+        android:background="#FFEEDD"
         android:gravity="center"
         android:text="Admin Panel"
         android:textColor="@color/button_tint"
