@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <androidx.constraintlayout.widget.ConstraintLayout
+    android:background="#FFEEDD"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -35,12 +36,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dinedash" />
 
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="314dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="289dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="68dp"
         android:fontFamily="@font/protest_riot"
         android:gravity="center"
         android:text="Tap.Order.Dine.Dash"
@@ -51,8 +53,6 @@
         app:layout_constraintTop_toBottomOf="@+id/DineDash"
         tools:ignore="MissingConstraints" />
 
-
-
     <ImageView
         android:id="@+id/dinedash1"
         android:layout_width="317dp"
@@ -60,6 +60,7 @@
         android:layout_marginStart="44dp"
         android:layout_marginTop="40dp"
         android:foregroundGravity="center"
+        android:background="@color/cardview_light_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/dinedashpic" />
