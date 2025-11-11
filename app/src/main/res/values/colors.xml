@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="button_tint">#F46322</color>
-    <color name="app_background">#FFFFFF</color>
+    <color name="app_background">#FFEEDD</color>
     <color name="my_dark_primary">#80F46322</color>
 </resources>

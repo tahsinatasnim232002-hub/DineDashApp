@@ -19,7 +19,7 @@ public class AdminTableActivity extends AppCompatActivity {
         setContentView(R.layout.activity_adminpage03);
 
         // view init
-//        titleText = findViewById(R.id.textView10);
+        titleText = findViewById(R.id.titleText);
         table1Btn = findViewById(R.id.table1);
         table2Btn = findViewById(R.id.table2);
         table3Btn = findViewById(R.id.table3);

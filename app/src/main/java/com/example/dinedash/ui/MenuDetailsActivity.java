@@ -3,6 +3,7 @@ package com.example.dinedash.ui;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -37,7 +38,7 @@ public class MenuDetailsActivity extends AppCompatActivity {
         if (selectedItems != null && !selectedItems.isEmpty()) {
             for (MenuItem item : selectedItems) {
                 TextView tv = new TextView(this);
-                tv.setText(item.getName() + " -Taka" + item.getPrice());
+                tv.setText(item.getName() +"  Price: "+ item.getPrice() + " -Taka");
                 tv.setTextSize(16);
                 detailsContainer.addView(tv);
 
@@ -46,7 +47,7 @@ public class MenuDetailsActivity extends AppCompatActivity {
 
             // Show total price
             TextView totalText = new TextView(this);
-            totalText.setText("Total: Taka" + total);
+            totalText.setText("Total: " + total + " Taka");
             totalText.setTextSize(18);
             totalText.setPadding(16, 16, 16, 16);
             detailsContainer.addView(totalText);
