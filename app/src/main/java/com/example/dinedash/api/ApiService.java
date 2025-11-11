@@ -5,6 +5,6 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import java.util.List;
 public interface ApiService {
-    @GET("menu")
+    @GET("menus")
     Call<List<MenuItem>> getMenuItems();
 }
