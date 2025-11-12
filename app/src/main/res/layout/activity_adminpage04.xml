@@ -48,11 +48,11 @@
         tools:layout_editor_absoluteX="9dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/backToTableBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/button_tint"
-        android:text="Continue"
+        android:text="Back To Table"
         android:textSize="20sp"
         android:textColor="#ffffff"
         android:textStyle="bold"

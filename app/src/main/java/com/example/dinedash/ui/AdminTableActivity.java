@@ -1,5 +1,6 @@
 package com.example.dinedash.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,13 +26,18 @@ public class AdminTableActivity extends AppCompatActivity {
         table3Btn = findViewById(R.id.table3);
 
         table1Btn.setOnClickListener(v-> {
+//            Intent intent = new Intent(AdminTableActivity.this, AdminOrderProcessActivity.class);
+//            startActivity(intent);
             setContentView(R.layout.activity_adminpage04);
         });
-//
-//        // Click listeners (single-page behavior)
-//        table1Btn.setOnClickListener(v -> onTableSelected("Table-01"));
-//        table2Btn.setOnClickListener(v -> onTableSelected("Table-02"));
-//        table3Btn.setOnClickListener(v -> onTableSelected("Table-03"));
+
+        table2Btn.setOnClickListener(v-> {
+            setContentView(R.layout.activity_adminpage04);
+        });
+
+        table3Btn.setOnClickListener(v-> {
+            setContentView(R.layout.activity_adminpage04);
+        });
     }
 
     /**
