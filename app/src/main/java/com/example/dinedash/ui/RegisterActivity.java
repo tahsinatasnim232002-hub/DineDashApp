@@ -25,6 +25,11 @@ public class RegisterActivity extends AppCompatActivity {
         EditText password = findViewById(R.id.password);
         EditText confirmPassword = findViewById(R.id.confirmPassword);
         Button signupBtn = findViewById(R.id.signup);
+        TextView loginBtn = findViewById(R.id.loginBtn);
+
+        loginBtn.setOnClickListener(v -> {
+            setContentView(R.layout.activity_login);
+        });
 
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -4,33 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#FFEEDD"
+    android:padding="20dp"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dinedash" />
-
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="189dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="88dp"
+    <LinearLayout
+        android:id="@+id/logoSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="DineDash"
-        android:textColor="#000000"
-        android:textSize="36dp"
-        android:textStyle="bold|normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
-        app:layout_constraintStart_toEndOf="@+id/imageView15"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <ImageView
+            android:id="@+id/dine_dash"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dinedash" />
+        <TextView
+            android:id="@+id/DineDash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="DineDash"
+            android:textColor="#000000"
+            android:textSize="36sp"
+            android:textStyle="bold|normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView8"
@@ -47,7 +50,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/logoSection"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
