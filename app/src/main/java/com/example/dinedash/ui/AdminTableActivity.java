@@ -2,6 +2,7 @@ package com.example.dinedash.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,19 +26,14 @@ public class AdminTableActivity extends AppCompatActivity {
         table2Btn = findViewById(R.id.table2);
         table3Btn = findViewById(R.id.table3);
 
-        table1Btn.setOnClickListener(v-> {
-//            Intent intent = new Intent(AdminTableActivity.this, AdminOrderProcessActivity.class);
-//            startActivity(intent);
-            setContentView(R.layout.activity_adminpage04);
-        });
+        View.OnClickListener tableClickListener = v -> {
+            Intent intent = new Intent(AdminTableActivity.this, AdminOrderProcessActivity.class);
+            startActivity(intent);
+        };
 
-        table2Btn.setOnClickListener(v-> {
-            setContentView(R.layout.activity_adminpage04);
-        });
-
-        table3Btn.setOnClickListener(v-> {
-            setContentView(R.layout.activity_adminpage04);
-        });
+        table1Btn.setOnClickListener(tableClickListener);
+        table2Btn.setOnClickListener(tableClickListener);
+        table3Btn.setOnClickListener(tableClickListener);
     }
 
     /**

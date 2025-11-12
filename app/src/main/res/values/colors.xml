@@ -3,4 +3,5 @@
     <color name="button_tint">#F46322</color>
     <color name="app_background">#FFEEDD</color>
     <color name="my_dark_primary">#80F46322</color>
+    <color name="purple_700">#E91E63</color>
 </resources>

@@ -14,6 +14,7 @@ import com.example.dinedash.R;
 import com.example.dinedash.model.MenuItem;
 
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class MenuDetailsActivity extends AppCompatActivity {
 
@@ -26,41 +27,66 @@ public class MenuDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menudetails);
 
-        // Views initialize
         detailsContainer = findViewById(R.id.detailcontainer);
         btnProceedPayment = findViewById(R.id.btnProceedToPayment);
 
-        // Get selected items from MenuActivity
+        // Get selected items from previous screen
         ArrayList<MenuItem> selectedItems = getIntent().getParcelableArrayListExtra("selected_items");
-
         double total = 0;
 
         if (selectedItems != null && !selectedItems.isEmpty()) {
             for (MenuItem item : selectedItems) {
-                TextView tv = new TextView(this);
-                tv.setText(item.getName() +"  Price: "+ item.getPrice() + " -Taka");
-                tv.setTextSize(16);
-                detailsContainer.addView(tv);
+                // Each item block
+                LinearLayout itemLayout = new LinearLayout(this);
+                itemLayout.setOrientation(LinearLayout.HORIZONTAL);
+                itemLayout.setPadding(16, 12, 16, 12);
 
+                // Item name
+                TextView nameView = new TextView(this);
+                nameView.setText(item.getName());
+                nameView.setLayoutParams(new LinearLayout.LayoutParams(
+                        0, LinearLayout.LayoutParams.WRAP_CONTENT, 1
+                ));
+                nameView.setTextSize(18);
+                nameView.setTextColor(getResources().getColor(android.R.color.black));
+
+                // Price
+                TextView priceView = new TextView(this);
+                priceView.setText("৳ " + item.getPrice());
+                priceView.setTextSize(18);
+                priceView.setTextColor(getResources().getColor(R.color.purple_700));
+
+                // Add both
+                itemLayout.addView(nameView);
+                itemLayout.addView(priceView);
+
+                // Add to container
+                detailsContainer.addView(itemLayout);
                 total += item.getPrice();
             }
 
-            // Show total price
+            // Add total at bottom
             TextView totalText = new TextView(this);
-            totalText.setText("Total: " + total + " Taka");
-            totalText.setTextSize(18);
-            totalText.setPadding(16, 16, 16, 16);
+            totalText.setText("\nTotal: ৳ " + total);
+            totalText.setTextSize(20);
+            totalText.setTextColor(getResources().getColor(android.R.color.black));
+            totalText.setPadding(0, 20, 0, 10);
             detailsContainer.addView(totalText);
+
         } else {
             TextView emptyText = new TextView(this);
             emptyText.setText("No items selected");
-            emptyText.setTextSize(16);
+            emptyText.setTextSize(18);
+            emptyText.setTextColor(getResources().getColor(android.R.color.darker_gray));
+            emptyText.setPadding(0, 40, 0, 0);
             detailsContainer.addView(emptyText);
         }
 
-        // Go to PaymentActivity on button click
+        // Proceed button click
         btnProceedPayment.setOnClickListener(v -> {
+            double total2 = 0;
             Intent intent = new Intent(MenuDetailsActivity.this, PaymentActivity.class);
+            intent.putExtra("total_price", total2);
             startActivity(intent);
         });
     }
