@@ -2,6 +2,7 @@ package com.example.dinedash.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -61,7 +62,17 @@ public class MenuActivity extends AppCompatActivity {
                     adapter = new MenuAdapter(response.body());
                     recyclerView.setAdapter(adapter);
                 } else {
-                    Toast.makeText(MenuActivity.this, "Failed to fetch menu", Toast.LENGTH_SHORT).show();
+                    String errorMessage = "Unknown error";
+                    try {
+                        if (response.errorBody() != null) {
+                            errorMessage = response.errorBody().string();
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                    Log.e("API_ERROR", "Code: " + response.code() + ", Message: " + errorMessage);
+                    Toast.makeText(MenuActivity.this, "Failed to fetch menu (" + response.code() + ")", Toast.LENGTH_SHORT).show();
                 }
             }
 

@@ -25,10 +25,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#10000000"
+            android:background="#5CFFFFFF"
             android:gravity="bottom"
             android:orientation="vertical"
-            android:padding="8dp"> <!-- semi-transparent overlay -->
+            android:padding="10dp"> <!-- semi-transparent overlay -->
 
             <TextView
                 android:id="@+id/menuName"

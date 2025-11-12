@@ -55,17 +55,17 @@
     <ImageView
         android:id="@+id/bannerImage"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintTop_toBottomOf="@id/slugLine"
-        app:srcCompat="@drawable/dinedashpic"
+        app:srcCompat="@drawable/homeimage1"
         tools:layout_editor_absoluteX="9dp" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="WELCOME"
         android:textSize="25dp"
